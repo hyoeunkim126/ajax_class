@@ -73,6 +73,8 @@
         <p>Copyright ⓒ INTERPARK Corporation All right reserved.</p>
       </footer>
 
+
+
       <script>
         $.ajax({
           method:"GET",
@@ -95,7 +97,12 @@
         $(".contextbox").append("<p>"+str2+"</p>");
         $(".contextbox").append("<span>"+"자세히 보기"+"</span>");
 
-
+        $(function(){
+          $.get("./sub_txt/txt1.txt", function(date){
+            $("#tmpBox").html(data);
+          })
+        });
+        
       </script>
     </body>
   </head>
