@@ -10,7 +10,7 @@ $.ajax({
   })
 $(".sub_box").append("<h3>" + msg.documents[0].title + "</h3>");
 $(".sub_box").append("<img src='" + msg.documents[0].thumbnail + "'/>");
-$(".sub_box").append("<h6>" + msg.documents[0].authors[0] + "</h6>");
+$(".contextbox").append("<h6>" + msg.documents[0].authors[0] + "</h6>");
 $(".pricenum").append(msg.documents[0].price + "원");
 
 var str = msg.documents[0].contents;
