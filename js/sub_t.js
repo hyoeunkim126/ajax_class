@@ -7,20 +7,21 @@ $.ajax({
   .done(function (msg) {
     console.log(msg.documents[1].title);
     console.log(msg.documents[1].thumbnail);
-  })
-$(".sub_box").append("<h3>" + msg.documents[0].title + "</h3>");
-$(".sub_box").append("<img src='" + msg.documents[0].thumbnail + "'/>");
-$(".contextbox").append("<h6>" + msg.documents[0].authors[0] + "</h6>");
-$(".pricenum").append(msg.documents[0].price + "원");
+  
+    $(".sub_box").append("<h3>" + msg.documents[0].title + "</h3>");
+    $(".sub_box").append("<img src='" + msg.documents[0].thumbnail + "'/>");
+    $(".contextbox").append("<h6>" + msg.documents[0].authors[0] + "</h6>");
+    $(".pricenum").append(msg.documents[0].price + "원");
 
-var str = msg.documents[0].contents;
-var str2 = str.substring(0, 600);
+    var str = msg.documents[0].contents;
+    var str2 = str.substring(0, 600);
 
-$(".contextbox").append("<p>" + str2 + "</p>");
-$(".contextbox").append("<span>" + "자세히 보기" + "</span>");
+    $(".contextbox").append("<p>" + str2 + "</p>");
+    $(".contextbox").append("<span>" + "자세히 보기" + "</span>");
+})
 
 $(function () {
   $.get("./sub_txt/txt1.txt", function (data) {
     $("#tmpBox").html(data);
-  });
+  })
 });
