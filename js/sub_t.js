@@ -20,7 +20,7 @@ $(".contextbox").append("<p>" + str2 + "</p>");
 $(".contextbox").append("<span>" + "자세히 보기" + "</span>");
 
 $(function () {
-  $.get("../sub_txt/txt1.txt", function (data) {
+  $.get("./sub_txt/txt1.txt", function (data) {
     $("#tmpBox").html(data);
   });
 });
